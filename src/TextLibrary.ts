@@ -1,4 +1,4 @@
-import { ArrayTools, NestedObjectChild, NestedPartialObject } from 'dotup-ts-types';
+import { ArrayTools, NestedObjectChild, NestedPartialObject, StringTools } from 'dotup-ts-types';
 import { LanguageEnum } from './LanguageEnum';
 import { PluralGroups } from './PluralGroups';
 
@@ -8,10 +8,11 @@ import { PluralGroups } from './PluralGroups';
 // export declare type Language<TLanguageCode extends string, TTextKeys extends string> = { [P in TLanguageCode]: TextKey<TTextKeys> };
 // export declare type Text<TLanguageCode extends string, TTextKeys extends string> = { [P in TTextKeys]: TextKey<TLanguageCode> };
 // export declare type TextKey<T extends string> = { [P in T]: string | string[] };
+
 // tslint:disable-next-line: interface-name
 export interface Translator<T> {
-  getText(key: T): string;
-  getTexts(key: T): string[];
+  getText(key: T, ...args: any[]): string;
+  getTexts(key: T, ...args: any[]): string[];
 }
 
 export type PluralizedString = NestedObjectChild<PluralGroups, string | string[]>;
@@ -26,13 +27,17 @@ export class TextLibrary<TTextKeys extends string> {
     this.data = data;
   }
 
-  initialize(parent: LanguageEnum): Translator<TTextKeys> {
+  getTranslator(parent: LanguageEnum): Translator<TTextKeys> {
     return {
-      getText: (textkey: TTextKeys, index: number = 0): string => {
-        return this.getText(parent, textkey)[index];
+      getText: (textkey: TTextKeys, ...args: any[]): string => {
+        const text = this.getText(parent, textkey)[0];
+
+        return StringTools.format(text, args);
       },
-      getTexts: (textkey: TTextKeys): string[] => {
-        return this.getText(parent, textkey);
+      getTexts: (textkey: TTextKeys, ...args: any[]): string[] => {
+        const texts = this.getText(parent, textkey);
+
+        return texts.map(text => StringTools.format(text, args));
       }
     };
     // return (textkey: TTextKeys): string => {
