@@ -30,9 +30,8 @@ export class TextLibrary<TTextKeys extends string> {
   getTranslator(parent: LanguageEnum): Translator<TTextKeys> {
     return {
       getText: (textkey: TTextKeys, ...args: any[]): string => {
-        const text = this.getText(parent, textkey)[0];
-
-        return StringTools.format(text, args);
+        const text = ArrayTools.getRandomValue(this.getText(parent, textkey));
+        return StringTools.format(text, ...args);
       },
       getTexts: (textkey: TTextKeys, ...args: any[]): string[] => {
         const texts = this.getText(parent, textkey);

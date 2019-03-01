@@ -8,7 +8,8 @@ export enum TextKeys {
   Pluralized = 'Pluralized',
   konkret = 'konkret',
   replace = 'replace',
-  replaceAdvanced = 'replaceAdvanced'
+  replaceAdvanced = 'replaceAdvanced',
+  replaceObject = 'replaceObject'
 }
 
 const translations: Translations<TextKeys> = {
@@ -19,6 +20,7 @@ const translations: Translations<TextKeys> = {
     konkret: 'konkret',
     replace: 'wo ist {0}',
     replaceAdvanced: 'wo ist {player1} und {player2}',
+    replaceObject: '{playerName} wo ist {otherName}',
     Pluralized: {
       one: 'only one'
     }
@@ -28,7 +30,7 @@ const translations: Translations<TextKeys> = {
 describe('TextLibrary', () => {
 
 
-  it('should create an instance', () => {
+  it('should relace text', () => {
 
     const value = new TextLibrary(translations);
     expect(value)
@@ -50,6 +52,10 @@ describe('TextLibrary', () => {
     text = t.getText(TextKeys.replace, 'egon');
     expect(text)
       .toBe('wo ist egon');
+
+    text = t.getText(TextKeys.replaceObject, { playerName: 'franz', otherName: 'tina' });
+    expect(text)
+      .toBe('franz wo ist tina');
 
     // text = t.getText(TextKeys.replace, { player1: 'gunther', player2: 'gabi' });
     // expect(text)
