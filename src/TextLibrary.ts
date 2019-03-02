@@ -46,7 +46,7 @@ export class TextLibrary<TTextKeys extends string> {
 
         let text = ArrayTools.getRandomValue(result);
         if (opt.plural !== undefined) {
-          const no = Intl.NumberFormat(parent)
+          const no = new Intl.NumberFormat(parent)
             .format(opt.plural.value);
           text = text.replace(regex_replace_number, no);
         }
@@ -77,7 +77,7 @@ export class TextLibrary<TTextKeys extends string> {
         const linksResolved = texts.map(t => StringTools.format(t, ...args));
 
         let text = ArrayTools.getRandomValue(linksResolved);
-        const no = Intl.NumberFormat(parent)
+        const no = new Intl.NumberFormat(parent)
           .format(count);
 
         text = text.replace(regex_replace_number, no);
@@ -89,7 +89,10 @@ export class TextLibrary<TTextKeys extends string> {
         const texts = this.getCardinal(parent, key, count);
 
         return texts.map(text => {
-          const result = text.replace(regex_replace_number, count.toString());
+          const no = new Intl.NumberFormat(parent)
+            .format(count);
+
+          const result = text.replace(regex_replace_number, no);
 
           return StringTools.format(result, ...args);
         });
@@ -99,7 +102,10 @@ export class TextLibrary<TTextKeys extends string> {
         const texts = this.getOrdinal(parent, key, count);
 
         return texts.map(text => {
-          const result = text.replace(regex_replace_number, count.toString());
+          const no = new Intl.NumberFormat(parent)
+            .format(count);
+
+          const result = text.replace(regex_replace_number, no);
 
           return StringTools.format(result, ...args);
         });
