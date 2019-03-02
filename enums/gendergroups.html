@@ -3,17 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>dotup-ts-internationalization</title>
+	<title>GenderGroups | dotup-ts-internationalization</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">dotup-ts-internationalization</a>
+					<a href="../index.html" class="title">dotup-ts-internationalization</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,187 +53,167 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="gendergroups.html">GenderGroups</a>
 				</li>
 			</ul>
-			<h1> dotup-ts-internationalization</h1>
+			<h1>Enumeration GenderGroups</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<p><a href="https://travis-ci.org/dotupNET/dotup-ts-internationalization"><img src="https://travis-ci.org/dotupNET/dotup-ts-internationalization.svg?branch=skill-template" alt="Build Status"></a></p>
-				<h1 id="dotup-ts-internationalization">dotup-ts-internationalization</h1>
-				<p>Library for typed translation and internationalization</p>
-				<h2 id="usage">USAGE</h2>
-				<pre><code class="language-typescript">
-<span class="hljs-keyword">enum</span> TextKeys {
-  <span class="hljs-string">'Hello'</span> = <span class="hljs-string">'Hello'</span>, <span class="hljs-string">'WithTextLink'</span> = <span class="hljs-string">'WithTextLink'</span>, <span class="hljs-string">'Slang'</span> = <span class="hljs-string">'Slang'</span>,
-  PluralizedWithGender = <span class="hljs-string">'PluralizedWithGender'</span>,
-  DirectText = <span class="hljs-string">'DirectText'</span>,
-  Pluralized = <span class="hljs-string">'Pluralized'</span>,
-  TextArray = <span class="hljs-string">'TextArray'</span>,
-  PlaceHolderText = <span class="hljs-string">'PlaceHolderText'</span>,
-  Gendered = <span class="hljs-string">'Gendered'</span>,
-  NamedPlaceHolderText = <span class="hljs-string">'NamedPlaceHolderText'</span>
-}
-
-<span class="hljs-keyword">const</span> translations: Translations&lt;TextKeys&gt; = {
-  <span class="hljs-string">'de-DE'</span>: {
-    PlaceHolderText: <span class="hljs-string">'Text with {0}'</span>,
-    NamedPlaceHolderText: <span class="hljs-string">'Text two with {MyVariable}'</span>,
-    DirectText: <span class="hljs-string">'DirectText'</span>,
-    TextArray: [<span class="hljs-string">'TextArray1'</span>, <span class="hljs-string">'TextArray2'</span>],
-    WithTextLink: [<span class="hljs-string">'$(DirectText) with $(Slang)'</span>],
-    Gendered: {
-      male: <span class="hljs-string">'is male'</span>,
-      female: <span class="hljs-string">'is female'</span>
-    },
-    Pluralized: {
-      plural: {
-        zero: <span class="hljs-string">'zero'</span>,
-        one: <span class="hljs-string">'one'</span>,
-        few: <span class="hljs-string">'few'</span>,
-        many: <span class="hljs-string">'many'</span>,
-        other: <span class="hljs-string">'other'</span>,
-        two: <span class="hljs-string">'two'</span>
-      }
-    },
-    PluralizedWithGender: {
-
-      plural: {
-        few: {
-          female: [<span class="hljs-string">''</span>],
-          male: <span class="hljs-string">'he has #'</span>
-        },
-        one: {
-          female: [<span class="hljs-string">'plural-one-female # $(DirectText)'</span>],
-          male: <span class="hljs-string">'plural-one-male $(DirectText)'</span>
-        },
-        other: <span class="hljs-string">'plural-other $(DirectText)'</span>,
-        many: <span class="hljs-string">''</span>
-      },
-      ordinal: {
-        one: [<span class="hljs-string">'erstes $(Hello)'</span>],
-        other: <span class="hljs-string">'zweites $(Hello)'</span>
-      }
-    },
-    Hello: [<span class="hljs-string">'Hallo'</span>, <span class="hljs-string">'Hi'</span>, <span class="hljs-string">'Servus'</span>],
-    Slang: [<span class="hljs-string">'nasen'</span>, <span class="hljs-string">'eumel'</span>, <span class="hljs-string">'vögel'</span>]
-  }
-};
-
-<span class="hljs-comment">// Initialize required languages</span>
-InitializeIntl(LanguageEnum.deDE, LanguageEnum.enGB);
-
-<span class="hljs-comment">// Initialize text library with text</span>
-<span class="hljs-keyword">const</span> tlib = <span class="hljs-keyword">new</span> TextLibrary(translations);
-<span class="hljs-comment">// Get a translator for a specific language</span>
-<span class="hljs-keyword">const</span> t = tlib.getTranslator(LanguageEnum.deDE);
-
-<span class="hljs-comment">// Translate</span>
-<span class="hljs-keyword">const</span> result = t.format({
-  key: TextKeys.PluralizedWithGender,
-  gender: GenderGroups.male,
-  plural: {
-    group: PluralGroups.plural,
-    value: <span class="hljs-number">1</span>
-  }
-});
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`format 1: <span class="hljs-subst">${result}</span>`</span>);
-</code></pre>
-				<h2 id="docs-">Docs:</h2>
-				<p><a href="https://dotupnet.github.io/dotup-ts-internationalization/index.html">https://dotupnet.github.io/dotup-ts-internationalization/index.html</a></p>
-				<h2 id="repository-">repository:</h2>
-				<p><a href="https://github.com/dotupNET/dotup-ts-internationalization/tree/skill-template">https://github.com/dotupNET/dotup-ts-internationalization/tree/skill-template</a></p>
-			</div>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Enumeration members</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="gendergroups.html#female" class="tsd-kind-icon">female</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="gendergroups.html#male" class="tsd-kind-icon">male</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="gendergroups.html#subject" class="tsd-kind-icon">subject</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Enumeration members</h2>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="female" class="tsd-anchor"></a>
+					<h3>female</h3>
+					<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;female&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in GenderGroups.ts:3</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="male" class="tsd-anchor"></a>
+					<h3>male</h3>
+					<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;male&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in GenderGroups.ts:2</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="subject" class="tsd-anchor"></a>
+					<h3>subject</h3>
+					<div class="tsd-signature tsd-kind-icon">subject<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;subject&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in GenderGroups.ts:4</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-enum">
+						<a href="gendergroups.html" class="tsd-kind-icon">Gender<wbr>Groups</a>
+						<ul>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="gendergroups.html#female" class="tsd-kind-icon">female</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="gendergroups.html#male" class="tsd-kind-icon">male</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="gendergroups.html#subject" class="tsd-kind-icon">subject</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-enum">
-						<a href="enums/gendergroups.html" class="tsd-kind-icon">Gender<wbr>Groups</a>
+						<a href="languageenum.html" class="tsd-kind-icon">Language<wbr>Enum</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/languageenum.html" class="tsd-kind-icon">Language<wbr>Enum</a>
+						<a href="pluralcategory.html" class="tsd-kind-icon">Plural<wbr>Category</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="enums/pluralcategory.html" class="tsd-kind-icon">Plural<wbr>Category</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="enums/pluralgroups.html" class="tsd-kind-icon">Plural<wbr>Groups</a>
+						<a href="pluralgroups.html" class="tsd-kind-icon">Plural<wbr>Groups</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-is-not-exported">
-						<a href="enums/textkeys.html" class="tsd-kind-icon">Text<wbr>Keys</a>
+						<a href="textkeys.html" class="tsd-kind-icon">Text<wbr>Keys</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/textlibrary.html" class="tsd-kind-icon">Text<wbr>Library</a>
+						<a href="../classes/textlibrary.html" class="tsd-kind-icon">Text<wbr>Library</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="interfaces/formatoptions.html" class="tsd-kind-icon">Format<wbr>Options</a>
+						<a href="../interfaces/formatoptions.html" class="tsd-kind-icon">Format<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="interfaces/translator.html" class="tsd-kind-icon">Translator</a>
+						<a href="../interfaces/translator.html" class="tsd-kind-icon">Translator</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#pluralizedgroup" class="tsd-kind-icon">Pluralized<wbr>Group</a>
+						<a href="../globals.html#pluralizedgroup" class="tsd-kind-icon">Pluralized<wbr>Group</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#pluralizedstring" class="tsd-kind-icon">Pluralized<wbr>String</a>
+						<a href="../globals.html#pluralizedstring" class="tsd-kind-icon">Pluralized<wbr>String</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#translationitem" class="tsd-kind-icon">Translation<wbr>Item</a>
+						<a href="../globals.html#translationitem" class="tsd-kind-icon">Translation<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="globals.html#translations" class="tsd-kind-icon">Translations</a>
+						<a href="../globals.html#translations" class="tsd-kind-icon">Translations</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#a" class="tsd-kind-icon">a</a>
+						<a href="../globals.html#a" class="tsd-kind-icon">a</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#areintllocalessupported" class="tsd-kind-icon">are<wbr>Intl<wbr>Locales<wbr>Supported</a>
+						<a href="../globals.html#areintllocalessupported" class="tsd-kind-icon">are<wbr>Intl<wbr>Locales<wbr>Supported</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#isgendergroup" class="tsd-kind-icon">is<wbr>Gender<wbr>Group</a>
+						<a href="../globals.html#isgendergroup" class="tsd-kind-icon">is<wbr>Gender<wbr>Group</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#ispluralcategory" class="tsd-kind-icon">is<wbr>Plural<wbr>Category</a>
+						<a href="../globals.html#ispluralcategory" class="tsd-kind-icon">is<wbr>Plural<wbr>Category</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#ispluralgroup" class="tsd-kind-icon">is<wbr>Plural<wbr>Group</a>
+						<a href="../globals.html#ispluralgroup" class="tsd-kind-icon">is<wbr>Plural<wbr>Group</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#regex_replace_number" class="tsd-kind-icon">regex_<wbr>replace_<wbr>number</a>
+						<a href="../globals.html#regex_replace_number" class="tsd-kind-icon">regex_<wbr>replace_<wbr>number</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#result" class="tsd-kind-icon">result</a>
+						<a href="../globals.html#result" class="tsd-kind-icon">result</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#t" class="tsd-kind-icon">t</a>
+						<a href="../globals.html#t" class="tsd-kind-icon">t</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#tlib" class="tsd-kind-icon">tlib</a>
+						<a href="../globals.html#tlib" class="tsd-kind-icon">tlib</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#xxx" class="tsd-kind-icon">xxx</a>
+						<a href="../globals.html#xxx" class="tsd-kind-icon">xxx</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#initializeintl" class="tsd-kind-icon">Initialize<wbr>Intl</a>
+						<a href="../globals.html#initializeintl" class="tsd-kind-icon">Initialize<wbr>Intl</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
-						<a href="globals.html#translations" class="tsd-kind-icon">translations</a>
+						<a href="../globals.html#translations" class="tsd-kind-icon">translations</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
-						<a href="globals.html#utility" class="tsd-kind-icon">utility</a>
+						<a href="../globals.html#utility" class="tsd-kind-icon">utility</a>
 					</li>
 				</ul>
 			</nav>
@@ -303,7 +283,7 @@ InitializeIntl(LanguageEnum.deDE, LanguageEnum.enGB);
 	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
