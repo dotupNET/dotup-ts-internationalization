@@ -1,21 +1,19 @@
-import { LanguageEnum } from './LanguageEnum';
-import { TextLibrary } from './TextLibrary';
-import { InitializeIntl } from './IntlInitializer';
 import { GenderGroups } from './GenderGroups';
-import { PluralGroups } from './PluralGroup';
+import { InitializeIntl } from './IntlInitializer';
+import { LanguageEnum } from './LanguageEnum';
 import { PluralCategory } from './PluralCategory';
+import { PluralGroups } from './PluralGroup';
+import { TextLibrary } from './TextLibrary';
 import { LanguageDictionary, TranslationDictionary } from './Types';
 
-
 const utility = {
-  escapeQuotes: function (string: string) {
-    return string.replace(/"/g, '\\"');
+  escapeQuotes: (s: string) => {
+    return s.replace(/"/g, '\\"');
   },
-  unescapeQuotes: function (string: string) {
-    return string.replace(/\\"/g, '"');
+  unescapeQuotes: (s: string) => {
+    return s.replace(/\\"/g, '"');
   }
 };
-
 
 enum TextKeys {
   'Hello' = 'Hello', 'WithTextLink' = 'WithTextLink', 'Slang' = 'Slang',
@@ -70,7 +68,7 @@ const newT: LanguageDictionary<TextKeys> = {
     Hello: ['Hallo', 'Hi', 'Servus'],
     Slang: ['nasen', 'eumel', 'vögel']
   }
-}
+};
 
 const tr: TranslationDictionary<TextKeys> = {
   PlaceHolderText: 'Text with {0}',
@@ -115,7 +113,6 @@ const tr: TranslationDictionary<TextKeys> = {
   Slang: ['nasen', 'eumel', 'vögel']
 };
 
-
 const translations: LanguageDictionary<TextKeys> = {
   'de-DE': {
     PlaceHolderText: 'Text with {0}',
@@ -146,7 +143,7 @@ const translations: LanguageDictionary<TextKeys> = {
         },
         one: {
           female: ['plural-one-female # $(DirectText)'],
-          male: 'plural-one-male $(DirectText)'
+          male: 'plural-one-male # $(DirectText)'
         },
         other: 'plural-other $(DirectText)',
         many: ''
@@ -160,13 +157,6 @@ const translations: LanguageDictionary<TextKeys> = {
     Slang: ['nasen', 'eumel', 'vögel']
   }
 };
-
-
-const a: any = translations['de-DE'];
-const xxx = a.ExtendedPluralized['plural']['few'];
-const isPluralGroup = Object.keys(PluralGroups).some(group => Object.keys(xxx).some(item => item === group));
-const isPluralCategory = Object.keys(PluralCategory).some(group => Object.keys(xxx).some(item => item === group));
-const isGenderGroup = Object.keys(GenderGroups).some(group => Object.keys(xxx).some(item => item === group));
 
 InitializeIntl(LanguageEnum.deDE, LanguageEnum.enGB);
 

@@ -1,9 +1,11 @@
+// tslint:disable:newline-per-chained-call
 import { GenderGroups } from '../src/GenderGroups';
 import { InitializeIntl } from '../src/IntlInitializer';
 import { LanguageEnum } from '../src/LanguageEnum';
 import { PluralGroups } from '../src/PluralGroup';
 import { TextLibrary } from '../src/TextLibrary';
-import { TranslationDictionary, LanguageDictionary } from '../src/Types';
+import { Translator } from '../src/Translator';
+import { LanguageDictionary } from '../src/Types';
 
 InitializeIntl(LanguageEnum.deDE, LanguageEnum.enGB);
 
@@ -65,8 +67,13 @@ const translations: LanguageDictionary<TextKeys> = {
 
 describe('TextLibrary', () => {
 
-  const textlib = new TextLibrary(translations);
-  const t = textlib.getTranslator(LanguageEnum.deDE);
+  let textlib: TextLibrary<TextKeys>;
+  let t: Translator<TextKeys>;
+
+  beforeAll(() => {
+    textlib = new TextLibrary(translations);
+    t = textlib.getTranslator(LanguageEnum.deDE);
+  });
 
   it('should create instace TextLibrary', () => {
     expect(textlib instanceof TextLibrary).toBeTruthy();
@@ -105,7 +112,7 @@ describe('TextLibrary', () => {
   it('should get male Gender', () =>
     expect(t.format({
       key: TextKeys.Gendered,
-      gender: GenderGroups.male,
+      gender: GenderGroups.male
     })
     ).toBe('is male')
   );
@@ -113,7 +120,7 @@ describe('TextLibrary', () => {
   it('should get female Gender', () =>
     expect(t.format({
       key: TextKeys.Gendered,
-      gender: GenderGroups.female,
+      gender: GenderGroups.female
     })
     ).toBe('is female')
   );

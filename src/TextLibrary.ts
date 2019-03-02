@@ -1,19 +1,19 @@
-import { ArrayTools, StringTools, ObjectTools } from 'dotup-ts-types';
+import { ArrayTools, ObjectTools, StringTools } from 'dotup-ts-types';
+// tslint:disable-next-line: no-import-side-effect
+import 'intl-pluralrules';
+import { FormatOptions } from './FormatOptions';
+import { GenderGroups } from './GenderGroups';
 import { LanguageEnum } from './LanguageEnum';
 import { PluralCategory } from './PluralCategory';
-import 'intl-pluralrules';
 import { PluralGroups } from './PluralGroup';
-import { GenderGroups } from './GenderGroups';
 import { Translator } from './Translator';
-import { FormatOptions } from './FormatOptions';
-import { TranslationDictionary, LanguageDictionary } from './Types';
+import { LanguageDictionary, TranslationDictionary } from './Types';
 /*
   http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html
  */
 
 const regex_replace_number = /#/gm;
 
-// export class TextLibrary<TParent extends string, TTextKeys extends string> {
 export class TextLibrary<TTextKeys extends string> {
   data: LanguageDictionary<TTextKeys>;
 
@@ -23,15 +23,16 @@ export class TextLibrary<TTextKeys extends string> {
 
   addTranslations(language: LanguageEnum, translations: TranslationDictionary<TTextKeys>) {
     const lng = this.data[language];
-    if (lng) {
-      ObjectTools.CopyEachSource(translations, lng);
-    } else {
+    if (lng === undefined) {
       this.data[language] = translations;
+    } else {
+      ObjectTools.CopyEachSource(translations, lng);
     }
   }
 
   getTranslator(parent: LanguageEnum): Translator<TTextKeys> {
     return {
+      // tslint:disable-next-line: no-any
       format: (options: TTextKeys | FormatOptions<TTextKeys>, ...args: any[]): string => {
         let opt: FormatOptions<TTextKeys>;
         if (typeof options === 'string') {
@@ -44,49 +45,58 @@ export class TextLibrary<TTextKeys extends string> {
         const result = this.resolve(parent, opt);
 
         let text = ArrayTools.getRandomValue(result);
-        if (opt.plural) {
+        if (opt.plural !== undefined) {
           text = text.replace(regex_replace_number, opt.plural.value.toString());
         }
+
         return StringTools.format(text, ...args);
 
         // const result = texts.map(text => StringTools.format(text, ...args));
         // return ArrayTools.getRandomValue(result);
       },
 
+      // tslint:disable-next-line: no-any
       getText: (textkey: TTextKeys, ...args: any[]): string => {
         const result = this.resolve(parent, { key: textkey });
 
         const text = ArrayTools.getRandomValue(result);
+
         return StringTools.format(text, ...args);
       },
+      // tslint:disable-next-line: no-any
       getTexts: (textkey: TTextKeys, ...args: any[]): string[] => {
         const result = this.resolve(parent, { key: textkey });
 
         return result.map(text => StringTools.format(text, ...args));
       },
+      // tslint:disable-next-line: no-any
       getPlural: (key: TTextKeys, count: number, ...args: any[]): string => {
         const texts = this.getCardinal(parent, key, count);
         const linksResolved = texts.map(t => StringTools.format(t, ...args));
 
         let text = ArrayTools.getRandomValue(linksResolved);
         text = text.replace(regex_replace_number, count.toString());
-        return StringTools.format(text, ...args);
 
+        return StringTools.format(text, ...args);
       },
+      // tslint:disable-next-line: no-any
       getPlurals: (key: TTextKeys, count: number, ...args: any[]): string[] => {
         const texts = this.getCardinal(parent, key, count);
 
         return texts.map(text => {
-          text = text.replace(regex_replace_number, count.toString());
-          return StringTools.format(text, ...args);
+          const result = text.replace(regex_replace_number, count.toString());
+
+          return StringTools.format(result, ...args);
         });
       },
+      // tslint:disable-next-line: no-any
       getOrdinals: (key: TTextKeys, count: number, ...args: any[]): string[] => {
         const texts = this.getOrdinal(parent, key, count);
 
         return texts.map(text => {
-          text = text.replace(regex_replace_number, count.toString());
-          return StringTools.format(text, ...args);
+          const result = text.replace(regex_replace_number, count.toString());
+
+          return StringTools.format(result, ...args);
         });
       }
     };
@@ -141,13 +151,15 @@ export class TextLibrary<TTextKeys extends string> {
     });
   }
 
+  // tslint:disable: no-unsafe-any : no-any
   resolve(language: LanguageEnum, options: FormatOptions<TTextKeys>): string[] {
     let result: string[];
+    let childEntry: any;
 
     // Select language
     if (language in this.data) {
       // Select key
-      let childEntry = (<any>this.data)[language][options.key];
+      childEntry = this.data[language][options.key];
 
       if (childEntry === undefined) {
         // key not found
@@ -155,35 +167,44 @@ export class TextLibrary<TTextKeys extends string> {
       } else {
         // extract the text
         do {
-          if (Array.isArray(childEntry) || typeof childEntry === 'string') {
+          if (typeof childEntry === 'string') {
             // It's text
-            result = <any>childEntry;
+            result = [childEntry];
+          } else if (Array.isArray(childEntry)) {
+            // It's text
+            result = childEntry;
           } else if (this.isPluralCategory(childEntry)) {
             // Plural category (zero, one,...)
             const pluralCategory = new Intl.PluralRules(language).select(options.plural.value);
             childEntry = childEntry[pluralCategory];
             if (childEntry === undefined) {
+              // tslint:disable-next-line: max-line-length
               result = [`TextKey '${options.key}' category '${pluralCategory}' group '${options.plural.group}' not found. value: ${options.plural.value}`];
             }
           } else if (this.isGenderGroup(childEntry)) {
             // Gender group
             childEntry = childEntry[options.gender];
             if (childEntry === undefined) {
+              // tslint:disable-next-line: max-line-length
               result = [`TextKey '${options.key}' gender '${options.gender}' group '${options.plural.group}' not found. value: ${options.plural.value}`];
             }
           } else if (this.isPluralGroup(childEntry)) {
             // Plural group
             childEntry = childEntry[options.plural.group];
             if (childEntry === undefined) {
+              // tslint:disable-next-line: max-line-length
               result = [`TextKey '${options.key}' gender '${options.gender}' group '${options.plural.group}' not found. value: ${options.plural.value}`];
             }
+          } else {
+            // wrong input
+            result = undefined;
           }
 
-        } while (typeof childEntry === 'object' && result === undefined);
+        } while (result === undefined);
 
         if (childEntry !== undefined) {
           // Here we are. This is the text
-          result = this.replaceTextLinks(childEntry, language, options);
+          result = this.replaceTextLinks(result, language, options);
         }
 
       }
@@ -194,18 +215,7 @@ export class TextLibrary<TTextKeys extends string> {
 
     return result;
   }
-
-  isPluralGroup(item: object) {
-    return Object.keys(PluralGroups).some(group => Object.keys(item).some(entry => entry === group));
-  }
-
-  isPluralCategory(item: object) {
-    return Object.keys(PluralCategory).some(group => Object.keys(item).some(entry => entry === group));
-  }
-
-  isGenderGroup(item: object) {
-    return Object.keys(GenderGroups).some(group => Object.keys(item).some(entry => entry === group));
-  }
+  // tslint:enable: no-unsafe-any : no-any
 
   replaceTextLinks(text: string | string[], parent: LanguageEnum, options: FormatOptions<TTextKeys>): string[] {
     const lines = Array.isArray(text) ? text : [text];
@@ -220,6 +230,7 @@ export class TextLibrary<TTextKeys extends string> {
           key: <TTextKeys>textKey,
           plural: options.plural
         });
+        // tslint:disable-next-line: max-line-length
         const replaceText = Array.isArray(replacementResult) ? ArrayTools.getUniqueRandomValues(replacementResult, 1)[0] : replacementResult;
         const result = line.replace(regex, replaceText);
 
@@ -236,4 +247,26 @@ export class TextLibrary<TTextKeys extends string> {
 
     return lines.map<string>(replaceLinkInLine);
   }
+
+  // tslint:disable-next-line:no-any
+  isPluralGroup(item: any): boolean {
+    return Object.keys(PluralGroups)
+      .some(group => Object.keys(item)
+        .some(entry => entry === group));
+  }
+
+  // tslint:disable-next-line:no-any
+  isPluralCategory(item: any): boolean {
+    return Object.keys(PluralCategory)
+      .some(group => Object.keys(item)
+        .some(entry => entry === group));
+  }
+
+  // tslint:disable-next-line:no-any
+  isGenderGroup(item: any): boolean {
+    return Object.keys(GenderGroups)
+      .some(group => Object.keys(item)
+        .some(entry => entry === group));
+  }
+
 }
