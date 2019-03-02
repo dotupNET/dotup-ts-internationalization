@@ -19,4 +19,7 @@ export type PluralizedTranslationItem = PartialNested<PluralGroups, PluralizedSt
 export type GenderedTranslationItem = PartialNested<GenderGroups, TranslationItem>;
 // tslint:disable-next-line:max-line-length
 export type TranslationDictionary<TTextKeys extends string> = Nested<TTextKeys, TranslationItem | PluralizedTranslationItem | GenderedTranslationItem>;
+// tslint:disable-next-line:max-line-length
+export type PartialTranslationDictionary<TTextKeys extends string> = PartialNested<TTextKeys, TranslationItem | PluralizedTranslationItem | GenderedTranslationItem>;
 export type LanguageDictionary<TTextKeys extends string> = PartialNested<LanguageEnum, TranslationDictionary<TTextKeys>>;
+export type PartialLanguageDictionary<TTextKeys extends string> = PartialNested<LanguageEnum, PartialTranslationDictionary<TTextKeys>>;
