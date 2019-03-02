@@ -1,4 +1,4 @@
-import { ArrayTools, NestedObjectChild, NestedPartialObject, StringTools } from 'dotup-ts-types';
+import { ArrayTools, StringTools, ObjectTools } from 'dotup-ts-types';
 import { LanguageEnum } from './LanguageEnum';
 import { PluralCategory } from './PluralCategory';
 import 'intl-pluralrules';
@@ -6,40 +6,28 @@ import { PluralGroups } from './PluralGroup';
 import { GenderGroups } from './GenderGroups';
 import { Translator } from './Translator';
 import { FormatOptions } from './FormatOptions';
-// import { Intl } from 'intl-pluralrules';
-// import PluralRules from 'intl-polyfill/plural-rules'
-
-//     "intl-pluralrules": "^1.0.0"
-
-// tslint:disable: max-line-length
-// export declare type LanguageTexts<TLanguageCode extends string, TTextKeysType extends string> = Language<TLanguageCode, TTextKeysType> | Text<TLanguageCode, TTextKeysType>;
-
-// export declare type Language<TLanguageCode extends string, TTextKeys extends string> = { [P in TLanguageCode]: TextKey<TTextKeys> };
-// export declare type Text<TLanguageCode extends string, TTextKeys extends string> = { [P in TTextKeys]: TextKey<TLanguageCode> };
-// export declare type TextKey<T extends string> = { [P in T]: string | string[] };
-
+import { TranslationDictionary, LanguageDictionary } from './Types';
 /*
   http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html
  */
-
-// export type PluralizedString = NestedObjectChild<PluralCategory, string | string[]>;
-export type PluralizedString = NestedObjectChild<PluralCategory, Partial<TranslationItem> | string | string[]>;
-// export type GenderedString = NestedObjectChild<GenderGroups, Partial<TranslationItem> | string | string[]>;
-export type PluralizedGroup = NestedObjectChild<PluralGroups, Partial<PluralizedString>>;
-// export type GenderizedGroup = NestedObjectChild<GenderGroups, Partial<PluralizedString>>;
-
-// export type GenderTranslationItem = NestedObjectChild<GenderGroups, string | string[]>;
-export type TranslationItem = NestedObjectChild<GenderGroups, string | string[]>;
-export type Translations<TTextKeys extends string> = NestedPartialObject<LanguageEnum, TTextKeys, string | string[] | Partial<PluralizedGroup> | Partial<TranslationItem>>;
 
 const regex_replace_number = /#/gm;
 
 // export class TextLibrary<TParent extends string, TTextKeys extends string> {
 export class TextLibrary<TTextKeys extends string> {
-  data: Translations<string>;
+  data: LanguageDictionary<TTextKeys>;
 
-  constructor(data: Translations<TTextKeys>) {
+  constructor(data: LanguageDictionary<TTextKeys>) {
     this.data = data;
+  }
+
+  addTranslations(language: LanguageEnum, translations: TranslationDictionary<TTextKeys>) {
+    const lng = this.data[language];
+    if (lng) {
+      ObjectTools.CopyEachSource(translations, lng);
+    } else {
+      this.data[language] = translations;
+    }
   }
 
   getTranslator(parent: LanguageEnum): Translator<TTextKeys> {
@@ -159,7 +147,7 @@ export class TextLibrary<TTextKeys extends string> {
     // Select language
     if (language in this.data) {
       // Select key
-      let childEntry = <any>this.data[language][options.key];
+      let childEntry = (<any>this.data)[language][options.key];
 
       if (childEntry === undefined) {
         // key not found

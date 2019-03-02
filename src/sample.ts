@@ -1,9 +1,10 @@
 import { LanguageEnum } from './LanguageEnum';
-import { TextLibrary, Translations } from './TextLibrary';
+import { TextLibrary } from './TextLibrary';
 import { InitializeIntl } from './IntlInitializer';
 import { GenderGroups } from './GenderGroups';
 import { PluralGroups } from './PluralGroup';
 import { PluralCategory } from './PluralCategory';
+import { LanguageDictionary, TranslationDictionary } from './Types';
 
 
 const utility = {
@@ -26,8 +27,96 @@ enum TextKeys {
   Gendered = 'Gendered',
   NamedPlaceHolderText = 'NamedPlaceHolderText'
 }
+const newT: LanguageDictionary<TextKeys> = {
+  'de-DE': {
+    PlaceHolderText: 'Text with {0}',
+    NamedPlaceHolderText: 'Text two with {MyVariable}',
+    DirectText: 'DirectText',
+    TextArray: ['TextArray1', 'TextArray1'],
+    WithTextLink: ['$(DirectText) with $(Slang)'],
+    Gendered: {
+      male: 'is male',
+      female: 'is female'
+    },
+    Pluralized: {
+      plural: {
+        zero: 'zero',
+        one: 'one',
+        few: 'few',
+        many: 'many',
+        other: 'other',
+        two: 'two'
+      }
+    },
+    PluralizedWithGender: {
 
-const translations: Translations<TextKeys> = {
+      plural: {
+        few: {
+          female: [''],
+          male: 'beim man #'
+        },
+        one: {
+          female: ['plural-one-female # $(DirectText)'],
+          male: 'plural-one-male $(DirectText)'
+        },
+        other: 'plural-other $(DirectText)',
+        many: ''
+      },
+      ordinal: {
+        one: ['erstes $(Hello)'],
+        other: 'zweites $(Hello)'
+      }
+    },
+    Hello: ['Hallo', 'Hi', 'Servus'],
+    Slang: ['nasen', 'eumel', 'vögel']
+  }
+}
+
+const tr: TranslationDictionary<TextKeys> = {
+  PlaceHolderText: 'Text with {0}',
+  NamedPlaceHolderText: 'Text two with {MyVariable}',
+  DirectText: 'DirectText',
+  TextArray: ['TextArray1', 'TextArray1'],
+  WithTextLink: ['$(DirectText) with $(Slang)'],
+  Gendered: {
+    male: 'is male',
+    female: 'is female'
+  },
+  Pluralized: {
+    plural: {
+      zero: 'zero',
+      one: 'one',
+      few: 'few',
+      many: 'many',
+      other: 'other',
+      two: 'two'
+    }
+  },
+  PluralizedWithGender: {
+
+    plural: {
+      few: {
+        female: [''],
+        male: 'beim man #'
+      },
+      one: {
+        female: ['plural-one-female # $(DirectText)'],
+        male: 'plural-one-male $(DirectText)'
+      },
+      other: 'plural-other $(DirectText)',
+      many: ''
+    },
+    ordinal: {
+      one: ['erstes $(Hello)'],
+      other: 'zweites $(Hello)'
+    }
+  },
+  Hello: ['Hallo', 'Hi', 'Servus'],
+  Slang: ['nasen', 'eumel', 'vögel']
+};
+
+
+const translations: LanguageDictionary<TextKeys> = {
   'de-DE': {
     PlaceHolderText: 'Text with {0}',
     NamedPlaceHolderText: 'Text two with {MyVariable}',
@@ -81,7 +170,7 @@ const isGenderGroup = Object.keys(GenderGroups).some(group => Object.keys(xxx).s
 
 InitializeIntl(LanguageEnum.deDE, LanguageEnum.enGB);
 
-const tlib = new TextLibrary(translations);
+const tlib = new TextLibrary<TextKeys>(translations);
 const t = tlib.getTranslator(LanguageEnum.deDE);
 
 const result = t.format({

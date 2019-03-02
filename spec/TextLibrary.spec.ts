@@ -2,7 +2,8 @@ import { GenderGroups } from '../src/GenderGroups';
 import { InitializeIntl } from '../src/IntlInitializer';
 import { LanguageEnum } from '../src/LanguageEnum';
 import { PluralGroups } from '../src/PluralGroup';
-import { TextLibrary, Translations } from '../src/TextLibrary';
+import { TextLibrary } from '../src/TextLibrary';
+import { TranslationDictionary, LanguageDictionary } from '../src/Types';
 
 InitializeIntl(LanguageEnum.deDE, LanguageEnum.enGB);
 
@@ -17,7 +18,7 @@ enum TextKeys {
   NamedPlaceHolderText = 'NamedPlaceHolderText'
 }
 
-const translations: Translations<TextKeys> = {
+const translations: LanguageDictionary<TextKeys> = {
   'de-DE': {
     PlaceHolderText: 'Text with {0}',
     NamedPlaceHolderText: 'Text two with {MyVariable}',
