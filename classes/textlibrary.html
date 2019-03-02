@@ -101,6 +101,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="textlibrary.html#addtranslations" class="tsd-kind-icon">add<wbr>Translations</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="textlibrary.html#getcardinal" class="tsd-kind-icon">get<wbr>Cardinal</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="textlibrary.html#getordinal" class="tsd-kind-icon">get<wbr>Ordinal</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="textlibrary.html#gettranslator" class="tsd-kind-icon">get<wbr>Translator</a></li>
@@ -120,19 +121,19 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Text<wbr>Library<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="../globals.html#translations" class="tsd-signature-type">Translations</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="textlibrary.html" class="tsd-signature-type">TextLibrary</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Text<wbr>Library<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="../globals.html#languagedictionary" class="tsd-signature-type">LanguageDictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="textlibrary.html" class="tsd-signature-type">TextLibrary</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L39">TextLibrary.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L18">TextLibrary.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>data: <a href="../globals.html#translations" class="tsd-signature-type">Translations</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>data: <a href="../globals.html#languagedictionary" class="tsd-signature-type">LanguageDictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="textlibrary.html" class="tsd-signature-type">TextLibrary</a></h4>
@@ -145,16 +146,42 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="data" class="tsd-anchor"></a>
 					<h3>data</h3>
-					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <a href="../globals.html#translations" class="tsd-signature-type">Translations</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <a href="../globals.html#languagedictionary" class="tsd-signature-type">LanguageDictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L39">TextLibrary.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L18">TextLibrary.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addtranslations" class="tsd-anchor"></a>
+					<h3>add<wbr>Translations</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Translations<span class="tsd-signature-symbol">(</span>language<span class="tsd-signature-symbol">: </span><a href="../enums/languageenum.html" class="tsd-signature-type">LanguageEnum</a>, translations<span class="tsd-signature-symbol">: </span><a href="../globals.html#translationdictionary" class="tsd-signature-type">TranslationDictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L24">TextLibrary.ts:24</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>language: <a href="../enums/languageenum.html" class="tsd-signature-type">LanguageEnum</a></h5>
+								</li>
+								<li>
+									<h5>translations: <a href="../globals.html#translationdictionary" class="tsd-signature-type">TranslationDictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getcardinal" class="tsd-anchor"></a>
 					<h3>get<wbr>Cardinal</h3>
@@ -165,7 +192,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L136">TextLibrary.ts:136</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L134">TextLibrary.ts:134</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -194,7 +221,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L146">TextLibrary.ts:146</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L144">TextLibrary.ts:144</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -223,7 +250,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L45">TextLibrary.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L33">TextLibrary.ts:33</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -240,19 +267,19 @@
 					<a name="isgendergroup" class="tsd-anchor"></a>
 					<h3>is<wbr>Gender<wbr>Group</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Gender<wbr>Group<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Gender<wbr>Group<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L218">TextLibrary.ts:218</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L266">TextLibrary.ts:266</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>item: <span class="tsd-signature-type">object</span></h5>
+									<h5>item: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -263,19 +290,19 @@
 					<a name="ispluralcategory" class="tsd-anchor"></a>
 					<h3>is<wbr>Plural<wbr>Category</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Plural<wbr>Category<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Plural<wbr>Category<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L214">TextLibrary.ts:214</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L259">TextLibrary.ts:259</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>item: <span class="tsd-signature-type">object</span></h5>
+									<h5>item: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -286,19 +313,19 @@
 					<a name="ispluralgroup" class="tsd-anchor"></a>
 					<h3>is<wbr>Plural<wbr>Group</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Plural<wbr>Group<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Plural<wbr>Group<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L210">TextLibrary.ts:210</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L252">TextLibrary.ts:252</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>item: <span class="tsd-signature-type">object</span></h5>
+									<h5>item: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -315,7 +342,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L222">TextLibrary.ts:222</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L220">TextLibrary.ts:220</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -344,7 +371,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L156">TextLibrary.ts:156</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L155">TextLibrary.ts:155</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -399,6 +426,9 @@
 								<a href="textlibrary.html#data" class="tsd-kind-icon">data</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="textlibrary.html#addtranslations" class="tsd-kind-icon">add<wbr>Translations</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="textlibrary.html#getcardinal" class="tsd-kind-icon">get<wbr>Cardinal</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -433,31 +463,25 @@
 						<a href="../interfaces/translator.html" class="tsd-kind-icon">Translator</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#pluralizedgroup" class="tsd-kind-icon">Pluralized<wbr>Group</a>
+						<a href="../globals.html#genderedtranslationitem" class="tsd-kind-icon">Gendered<wbr>Translation<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#languagedictionary" class="tsd-kind-icon">Language<wbr>Dictionary</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#pluralizedstring" class="tsd-kind-icon">Pluralized<wbr>String</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#translationitem" class="tsd-kind-icon">Translation<wbr>Item</a>
+						<a href="../globals.html#pluralizedtranslationitem" class="tsd-kind-icon">Pluralized<wbr>Translation<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="../globals.html#translations" class="tsd-kind-icon">Translations</a>
+						<a href="../globals.html#translationdictionary" class="tsd-kind-icon">Translation<wbr>Dictionary</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#a" class="tsd-kind-icon">a</a>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#translationitem" class="tsd-kind-icon">Translation<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#areintllocalessupported" class="tsd-kind-icon">are<wbr>Intl<wbr>Locales<wbr>Supported</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#isgendergroup" class="tsd-kind-icon">is<wbr>Gender<wbr>Group</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#ispluralcategory" class="tsd-kind-icon">is<wbr>Plural<wbr>Category</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#ispluralgroup" class="tsd-kind-icon">is<wbr>Plural<wbr>Group</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#regex_replace_number" class="tsd-kind-icon">regex_<wbr>replace_<wbr>number</a>
@@ -471,11 +495,14 @@
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#tlib" class="tsd-kind-icon">tlib</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#xxx" class="tsd-kind-icon">xxx</a>
-					</li>
 					<li class=" tsd-kind-function">
 						<a href="../globals.html#initializeintl" class="tsd-kind-icon">Initialize<wbr>Intl</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="../globals.html#newt" class="tsd-kind-icon">newT</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="../globals.html#tr" class="tsd-kind-icon">tr</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="../globals.html#translations" class="tsd-kind-icon">translations</a>

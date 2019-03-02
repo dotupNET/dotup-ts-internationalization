@@ -93,25 +93,22 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias"><a href="globals.html#pluralizedgroup" class="tsd-kind-icon">Pluralized<wbr>Group</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#genderedtranslationitem" class="tsd-kind-icon">Gendered<wbr>Translation<wbr>Item</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#languagedictionary" class="tsd-kind-icon">Language<wbr>Dictionary</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#pluralizedstring" class="tsd-kind-icon">Pluralized<wbr>String</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#pluralizedtranslationitem" class="tsd-kind-icon">Pluralized<wbr>Translation<wbr>Item</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#translationdictionary" class="tsd-kind-icon">Translation<wbr>Dictionary</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#translationitem" class="tsd-kind-icon">Translation<wbr>Item</a></li>
-								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#translations" class="tsd-kind-icon">Translations</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#a" class="tsd-kind-icon">a</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#areintllocalessupported" class="tsd-kind-icon">are<wbr>Intl<wbr>Locales<wbr>Supported</a></li>
-								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#isgendergroup" class="tsd-kind-icon">is<wbr>Gender<wbr>Group</a></li>
-								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#ispluralcategory" class="tsd-kind-icon">is<wbr>Plural<wbr>Category</a></li>
-								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#ispluralgroup" class="tsd-kind-icon">is<wbr>Plural<wbr>Group</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#regex_replace_number" class="tsd-kind-icon">regex_<wbr>replace_<wbr>number</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#result" class="tsd-kind-icon">result</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#t" class="tsd-kind-icon">t</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#tlib" class="tsd-kind-icon">tlib</a></li>
-								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#xxx" class="tsd-kind-icon">xxx</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -123,6 +120,8 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-is-not-exported"><a href="globals.html#newt" class="tsd-kind-icon">newT</a></li>
+								<li class="tsd-kind-object-literal tsd-is-not-exported"><a href="globals.html#tr" class="tsd-kind-icon">tr</a></li>
 								<li class="tsd-kind-object-literal tsd-is-not-exported"><a href="globals.html#translations" class="tsd-kind-icon">translations</a></li>
 								<li class="tsd-kind-object-literal tsd-is-not-exported"><a href="globals.html#utility" class="tsd-kind-icon">utility</a></li>
 							</ul>
@@ -133,42 +132,62 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
-					<a name="pluralizedgroup" class="tsd-anchor"></a>
-					<h3>Pluralized<wbr>Group</h3>
-					<div class="tsd-signature tsd-kind-icon">Pluralized<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NestedObjectChild</span><span class="tsd-signature-symbol">&lt;</span><a href="enums/pluralgroups.html" class="tsd-signature-type">PluralGroups</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#pluralizedstring" class="tsd-signature-type">PluralizedString</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="genderedtranslationitem" class="tsd-anchor"></a>
+					<h3>Gendered<wbr>Translation<wbr>Item</h3>
+					<div class="tsd-signature tsd-kind-icon">Gendered<wbr>Translation<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PartialNested</span><span class="tsd-signature-symbol">&lt;</span><a href="enums/gendergroups.html" class="tsd-signature-type">GenderGroups</a><span class="tsd-signature-symbol">, </span><a href="globals.html#translationitem" class="tsd-signature-type">TranslationItem</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L28">TextLibrary.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/Types.ts#L19">Types.ts:19</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="languagedictionary" class="tsd-anchor"></a>
+					<h3>Language<wbr>Dictionary</h3>
+					<div class="tsd-signature tsd-kind-icon">Language<wbr>Dictionary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PartialNested</span><span class="tsd-signature-symbol">&lt;</span><a href="enums/languageenum.html" class="tsd-signature-type">LanguageEnum</a><span class="tsd-signature-symbol">, </span><a href="globals.html#translationdictionary" class="tsd-signature-type">TranslationDictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/Types.ts#L22">Types.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="pluralizedstring" class="tsd-anchor"></a>
 					<h3>Pluralized<wbr>String</h3>
-					<div class="tsd-signature tsd-kind-icon">Pluralized<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NestedObjectChild</span><span class="tsd-signature-symbol">&lt;</span><a href="enums/pluralcategory.html" class="tsd-signature-type">PluralCategory</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#translationitem" class="tsd-signature-type">TranslationItem</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Pluralized<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PartialNested</span><span class="tsd-signature-symbol">&lt;</span><a href="enums/pluralcategory.html" class="tsd-signature-type">PluralCategory</a><span class="tsd-signature-symbol">, </span><a href="globals.html#genderedtranslationitem" class="tsd-signature-type">GenderedTranslationItem</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#translationitem" class="tsd-signature-type">TranslationItem</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L26">TextLibrary.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/Types.ts#L17">Types.ts:17</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="pluralizedtranslationitem" class="tsd-anchor"></a>
+					<h3>Pluralized<wbr>Translation<wbr>Item</h3>
+					<div class="tsd-signature tsd-kind-icon">Pluralized<wbr>Translation<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PartialNested</span><span class="tsd-signature-symbol">&lt;</span><a href="enums/pluralgroups.html" class="tsd-signature-type">PluralGroups</a><span class="tsd-signature-symbol">, </span><a href="globals.html#pluralizedstring" class="tsd-signature-type">PluralizedString</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/Types.ts#L18">Types.ts:18</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="translationdictionary" class="tsd-anchor"></a>
+					<h3>Translation<wbr>Dictionary</h3>
+					<div class="tsd-signature tsd-kind-icon">Translation<wbr>Dictionary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Nested</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">, </span><a href="globals.html#translationitem" class="tsd-signature-type">TranslationItem</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#pluralizedtranslationitem" class="tsd-signature-type">PluralizedTranslationItem</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#genderedtranslationitem" class="tsd-signature-type">GenderedTranslationItem</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/Types.ts#L21">Types.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="translationitem" class="tsd-anchor"></a>
 					<h3>Translation<wbr>Item</h3>
-					<div class="tsd-signature tsd-kind-icon">Translation<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NestedObjectChild</span><span class="tsd-signature-symbol">&lt;</span><a href="enums/gendergroups.html" class="tsd-signature-type">GenderGroups</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Translation<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L32">TextLibrary.ts:32</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-					<a name="translations" class="tsd-anchor"></a>
-					<h3>Translations</h3>
-					<div class="tsd-signature tsd-kind-icon">Translations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NestedPartialObject</span><span class="tsd-signature-symbol">&lt;</span><a href="enums/languageenum.html" class="tsd-signature-type">LanguageEnum</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TTextKeys</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#pluralizedgroup" class="tsd-signature-type">PluralizedGroup</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#translationitem" class="tsd-signature-type">TranslationItem</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L33">TextLibrary.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/Types.ts#L16">Types.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -176,52 +195,12 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
-					<a name="a" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> a</h3>
-					<div class="tsd-signature tsd-kind-icon">a<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;translations[&#x27;de-DE&#x27;]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L76">sample.ts:76</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
 					<a name="areintllocalessupported" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> are<wbr>Intl<wbr>Locales<wbr>Supported</h3>
 					<div class="tsd-signature tsd-kind-icon">are<wbr>Intl<wbr>Locales<wbr>Supported<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&#x27;intl-locales-supported&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in IntlInitializer.ts:3</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
-					<a name="isgendergroup" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Gender<wbr>Group</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Gender<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;Object.keys(GenderGroups).some(group &#x3D;&gt; Object.keys(xxx).some(item &#x3D;&gt; item &#x3D;&#x3D;&#x3D; group))</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L80">sample.ts:80</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
-					<a name="ispluralcategory" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Plural<wbr>Category</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Plural<wbr>Category<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;Object.keys(PluralCategory).some(group &#x3D;&gt; Object.keys(xxx).some(item &#x3D;&gt; item &#x3D;&#x3D;&#x3D; group))</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L79">sample.ts:79</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
-					<a name="ispluralgroup" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Plural<wbr>Group</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Plural<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;Object.keys(PluralGroups).some(group &#x3D;&gt; Object.keys(xxx).some(item &#x3D;&gt; item &#x3D;&#x3D;&#x3D; group))</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L78">sample.ts:78</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/IntlInitializer.ts#L3">IntlInitializer.ts:3</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -231,7 +210,7 @@
 					<div class="tsd-signature tsd-kind-icon">regex_<wbr>replace_<wbr>number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/#/gm</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/TextLibrary.ts#L35">TextLibrary.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/TextLibrary.ts#L15">TextLibrary.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -241,7 +220,7 @@
 					<div class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;t.format({key: TextKeys.PluralizedWithGender,gender: GenderGroups.male,plural: {group: PluralGroups.plural,value: 1}})</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L87">sample.ts:87</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L166">sample.ts:166</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -251,27 +230,17 @@
 					<div class="tsd-signature tsd-kind-icon">t<span class="tsd-signature-symbol">:</span> <a href="interfaces/translator.html" class="tsd-signature-type">Translator</a><span class="tsd-signature-symbol">&lt;</span><a href="enums/textkeys.html" class="tsd-signature-type">TextKeys</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;tlib.getTranslator(LanguageEnum.deDE)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L85">sample.ts:85</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L164">sample.ts:164</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
 					<a name="tlib" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> tlib</h3>
-					<div class="tsd-signature tsd-kind-icon">tlib<span class="tsd-signature-symbol">:</span> <a href="classes/textlibrary.html" class="tsd-signature-type">TextLibrary</a><span class="tsd-signature-symbol">&lt;</span><a href="enums/textkeys.html" class="tsd-signature-type">TextKeys</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new TextLibrary(translations)</span></div>
+					<div class="tsd-signature tsd-kind-icon">tlib<span class="tsd-signature-symbol">:</span> <a href="classes/textlibrary.html" class="tsd-signature-type">TextLibrary</a><span class="tsd-signature-symbol">&lt;</span><a href="enums/textkeys.html" class="tsd-signature-type">TextKeys</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new TextLibrary&lt;TextKeys&gt;(translations)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L84">sample.ts:84</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
-					<a name="xxx" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> xxx</h3>
-					<div class="tsd-signature tsd-kind-icon">xxx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;a.ExtendedPluralized[&#x27;plural&#x27;][&#x27;few&#x27;]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L77">sample.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L163">sample.ts:163</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -288,7 +257,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in IntlInitializer.ts:5</li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/IntlInitializer.ts#L5">IntlInitializer.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -305,12 +274,662 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-is-not-exported">
+					<a name="newt" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> newT</h3>
+					<div class="tsd-signature tsd-kind-icon">newT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L28">sample.ts:28</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="newt.de_de" class="tsd-anchor"></a>
+						<h3>de-<wbr>DE</h3>
+						<div class="tsd-signature tsd-kind-icon">de-<wbr>DE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L29">sample.ts:29</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.directtext" class="tsd-anchor"></a>
+							<h3>Direct<wbr>Text</h3>
+							<div class="tsd-signature tsd-kind-icon">Direct<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;DirectText&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L32">sample.ts:32</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.hello" class="tsd-anchor"></a>
+							<h3>Hello</h3>
+							<div class="tsd-signature tsd-kind-icon">Hello<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;Hallo&#x27;, &#x27;Hi&#x27;, &#x27;Servus&#x27;]</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L68">sample.ts:68</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.namedplaceholdertext" class="tsd-anchor"></a>
+							<h3>Named<wbr>Place<wbr>Holder<wbr>Text</h3>
+							<div class="tsd-signature tsd-kind-icon">Named<wbr>Place<wbr>Holder<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Text two with {MyVariable}&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L31">sample.ts:31</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.placeholdertext" class="tsd-anchor"></a>
+							<h3>Place<wbr>Holder<wbr>Text</h3>
+							<div class="tsd-signature tsd-kind-icon">Place<wbr>Holder<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Text with {0}&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L30">sample.ts:30</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.slang" class="tsd-anchor"></a>
+							<h3>Slang</h3>
+							<div class="tsd-signature tsd-kind-icon">Slang<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;nasen&#x27;, &#x27;eumel&#x27;, &#x27;vögel&#x27;]</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L69">sample.ts:69</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.textarray" class="tsd-anchor"></a>
+							<h3>Text<wbr>Array</h3>
+							<div class="tsd-signature tsd-kind-icon">Text<wbr>Array<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;TextArray1&#x27;, &#x27;TextArray1&#x27;]</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L33">sample.ts:33</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.withtextlink" class="tsd-anchor"></a>
+							<h3>With<wbr>Text<wbr>Link</h3>
+							<div class="tsd-signature tsd-kind-icon">With<wbr>Text<wbr>Link<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;$(DirectText) with $(Slang)&#x27;]</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L34">sample.ts:34</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.gendered" class="tsd-anchor"></a>
+							<h3>Gendered</h3>
+							<div class="tsd-signature tsd-kind-icon">Gendered<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L35">sample.ts:35</a></li>
+								</ul>
+							</aside>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="newt.de_de.gendered.female" class="tsd-anchor"></a>
+								<h3>female</h3>
+								<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;is female&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L37">sample.ts:37</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="newt.de_de.gendered.male" class="tsd-anchor"></a>
+								<h3>male</h3>
+								<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;is male&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L36">sample.ts:36</a></li>
+									</ul>
+								</aside>
+							</section>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.pluralized" class="tsd-anchor"></a>
+							<h3>Pluralized</h3>
+							<div class="tsd-signature tsd-kind-icon">Pluralized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L39">sample.ts:39</a></li>
+								</ul>
+							</aside>
+							<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="newt.de_de.pluralized.plural" class="tsd-anchor"></a>
+								<h3>plural</h3>
+								<div class="tsd-signature tsd-kind-icon">plural<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L40">sample.ts:40</a></li>
+									</ul>
+								</aside>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralized.plural.few" class="tsd-anchor"></a>
+									<h3>few</h3>
+									<div class="tsd-signature tsd-kind-icon">few<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;few&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L43">sample.ts:43</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralized.plural.many" class="tsd-anchor"></a>
+									<h3>many</h3>
+									<div class="tsd-signature tsd-kind-icon">many<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;many&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L44">sample.ts:44</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralized.plural.one" class="tsd-anchor"></a>
+									<h3>one</h3>
+									<div class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;one&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L42">sample.ts:42</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralized.plural.other" class="tsd-anchor"></a>
+									<h3>other</h3>
+									<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;other&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L45">sample.ts:45</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralized.plural.two" class="tsd-anchor"></a>
+									<h3>two</h3>
+									<div class="tsd-signature tsd-kind-icon">two<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;two&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L46">sample.ts:46</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralized.plural.zero" class="tsd-anchor"></a>
+									<h3>zero</h3>
+									<div class="tsd-signature tsd-kind-icon">zero<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;zero&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L41">sample.ts:41</a></li>
+										</ul>
+									</aside>
+								</section>
+							</section>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="newt.de_de.pluralizedwithgender" class="tsd-anchor"></a>
+							<h3>Pluralized<wbr>With<wbr>Gender</h3>
+							<div class="tsd-signature tsd-kind-icon">Pluralized<wbr>With<wbr>Gender<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L49">sample.ts:49</a></li>
+								</ul>
+							</aside>
+							<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="newt.de_de.pluralizedwithgender.ordinal" class="tsd-anchor"></a>
+								<h3>ordinal</h3>
+								<div class="tsd-signature tsd-kind-icon">ordinal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L63">sample.ts:63</a></li>
+									</ul>
+								</aside>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralizedwithgender.ordinal.one-1" class="tsd-anchor"></a>
+									<h3>one</h3>
+									<div class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;erstes $(Hello)&#x27;]</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L64">sample.ts:64</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralizedwithgender.ordinal.other-1" class="tsd-anchor"></a>
+									<h3>other</h3>
+									<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;zweites $(Hello)&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L65">sample.ts:65</a></li>
+										</ul>
+									</aside>
+								</section>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="newt.de_de.pluralizedwithgender.plural-1" class="tsd-anchor"></a>
+								<h3>plural</h3>
+								<div class="tsd-signature tsd-kind-icon">plural<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L51">sample.ts:51</a></li>
+									</ul>
+								</aside>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralizedwithgender.plural-1.many-1" class="tsd-anchor"></a>
+									<h3>many</h3>
+									<div class="tsd-signature tsd-kind-icon">many<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L61">sample.ts:61</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralizedwithgender.plural-1.other-2" class="tsd-anchor"></a>
+									<h3>other</h3>
+									<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;plural-other $(DirectText)&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L60">sample.ts:60</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralizedwithgender.plural-1.few-1" class="tsd-anchor"></a>
+									<h3>few</h3>
+									<div class="tsd-signature tsd-kind-icon">few<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L52">sample.ts:52</a></li>
+										</ul>
+									</aside>
+									<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+										<a name="newt.de_de.pluralizedwithgender.plural-1.few-1.female-1" class="tsd-anchor"></a>
+										<h3>female</h3>
+										<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;&#x27;]</span></div>
+										<aside class="tsd-sources">
+											<ul>
+												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L53">sample.ts:53</a></li>
+											</ul>
+										</aside>
+									</section>
+									<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+										<a name="newt.de_de.pluralizedwithgender.plural-1.few-1.male-1" class="tsd-anchor"></a>
+										<h3>male</h3>
+										<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;beim man #&quot;</span></div>
+										<aside class="tsd-sources">
+											<ul>
+												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L54">sample.ts:54</a></li>
+											</ul>
+										</aside>
+									</section>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="newt.de_de.pluralizedwithgender.plural-1.one-2" class="tsd-anchor"></a>
+									<h3>one</h3>
+									<div class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L56">sample.ts:56</a></li>
+										</ul>
+									</aside>
+									<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+										<a name="newt.de_de.pluralizedwithgender.plural-1.one-2.female-2" class="tsd-anchor"></a>
+										<h3>female</h3>
+										<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;plural-one-female # $(DirectText)&#x27;]</span></div>
+										<aside class="tsd-sources">
+											<ul>
+												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L57">sample.ts:57</a></li>
+											</ul>
+										</aside>
+									</section>
+									<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+										<a name="newt.de_de.pluralizedwithgender.plural-1.one-2.male-2" class="tsd-anchor"></a>
+										<h3>male</h3>
+										<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;plural-one-male $(DirectText)&quot;</span></div>
+										<aside class="tsd-sources">
+											<ul>
+												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L58">sample.ts:58</a></li>
+											</ul>
+										</aside>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-is-not-exported">
+					<a name="tr" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> tr</h3>
+					<div class="tsd-signature tsd-kind-icon">tr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L73">sample.ts:73</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.directtext" class="tsd-anchor"></a>
+						<h3>Direct<wbr>Text</h3>
+						<div class="tsd-signature tsd-kind-icon">Direct<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;DirectText&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L76">sample.ts:76</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.hello" class="tsd-anchor"></a>
+						<h3>Hello</h3>
+						<div class="tsd-signature tsd-kind-icon">Hello<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;Hallo&#x27;, &#x27;Hi&#x27;, &#x27;Servus&#x27;]</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L112">sample.ts:112</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.namedplaceholdertext" class="tsd-anchor"></a>
+						<h3>Named<wbr>Place<wbr>Holder<wbr>Text</h3>
+						<div class="tsd-signature tsd-kind-icon">Named<wbr>Place<wbr>Holder<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Text two with {MyVariable}&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L75">sample.ts:75</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.placeholdertext" class="tsd-anchor"></a>
+						<h3>Place<wbr>Holder<wbr>Text</h3>
+						<div class="tsd-signature tsd-kind-icon">Place<wbr>Holder<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Text with {0}&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L74">sample.ts:74</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.slang" class="tsd-anchor"></a>
+						<h3>Slang</h3>
+						<div class="tsd-signature tsd-kind-icon">Slang<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;nasen&#x27;, &#x27;eumel&#x27;, &#x27;vögel&#x27;]</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L113">sample.ts:113</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.textarray" class="tsd-anchor"></a>
+						<h3>Text<wbr>Array</h3>
+						<div class="tsd-signature tsd-kind-icon">Text<wbr>Array<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;TextArray1&#x27;, &#x27;TextArray1&#x27;]</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L77">sample.ts:77</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.withtextlink" class="tsd-anchor"></a>
+						<h3>With<wbr>Text<wbr>Link</h3>
+						<div class="tsd-signature tsd-kind-icon">With<wbr>Text<wbr>Link<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;$(DirectText) with $(Slang)&#x27;]</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L78">sample.ts:78</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.gendered" class="tsd-anchor"></a>
+						<h3>Gendered</h3>
+						<div class="tsd-signature tsd-kind-icon">Gendered<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L79">sample.ts:79</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="tr.gendered.female" class="tsd-anchor"></a>
+							<h3>female</h3>
+							<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;is female&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L81">sample.ts:81</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="tr.gendered.male" class="tsd-anchor"></a>
+							<h3>male</h3>
+							<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;is male&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L80">sample.ts:80</a></li>
+								</ul>
+							</aside>
+						</section>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.pluralized" class="tsd-anchor"></a>
+						<h3>Pluralized</h3>
+						<div class="tsd-signature tsd-kind-icon">Pluralized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L83">sample.ts:83</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="tr.pluralized.plural" class="tsd-anchor"></a>
+							<h3>plural</h3>
+							<div class="tsd-signature tsd-kind-icon">plural<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L84">sample.ts:84</a></li>
+								</ul>
+							</aside>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralized.plural.few" class="tsd-anchor"></a>
+								<h3>few</h3>
+								<div class="tsd-signature tsd-kind-icon">few<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;few&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L87">sample.ts:87</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralized.plural.many" class="tsd-anchor"></a>
+								<h3>many</h3>
+								<div class="tsd-signature tsd-kind-icon">many<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;many&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L88">sample.ts:88</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralized.plural.one" class="tsd-anchor"></a>
+								<h3>one</h3>
+								<div class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;one&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L86">sample.ts:86</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralized.plural.other" class="tsd-anchor"></a>
+								<h3>other</h3>
+								<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;other&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L89">sample.ts:89</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralized.plural.two" class="tsd-anchor"></a>
+								<h3>two</h3>
+								<div class="tsd-signature tsd-kind-icon">two<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;two&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L90">sample.ts:90</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralized.plural.zero" class="tsd-anchor"></a>
+								<h3>zero</h3>
+								<div class="tsd-signature tsd-kind-icon">zero<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;zero&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L85">sample.ts:85</a></li>
+									</ul>
+								</aside>
+							</section>
+						</section>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tr.pluralizedwithgender" class="tsd-anchor"></a>
+						<h3>Pluralized<wbr>With<wbr>Gender</h3>
+						<div class="tsd-signature tsd-kind-icon">Pluralized<wbr>With<wbr>Gender<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L93">sample.ts:93</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="tr.pluralizedwithgender.ordinal" class="tsd-anchor"></a>
+							<h3>ordinal</h3>
+							<div class="tsd-signature tsd-kind-icon">ordinal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L107">sample.ts:107</a></li>
+								</ul>
+							</aside>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralizedwithgender.ordinal.one-1" class="tsd-anchor"></a>
+								<h3>one</h3>
+								<div class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;erstes $(Hello)&#x27;]</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L108">sample.ts:108</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralizedwithgender.ordinal.other-1" class="tsd-anchor"></a>
+								<h3>other</h3>
+								<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;zweites $(Hello)&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L109">sample.ts:109</a></li>
+									</ul>
+								</aside>
+							</section>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+							<a name="tr.pluralizedwithgender.plural-1" class="tsd-anchor"></a>
+							<h3>plural</h3>
+							<div class="tsd-signature tsd-kind-icon">plural<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L95">sample.ts:95</a></li>
+								</ul>
+							</aside>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralizedwithgender.plural-1.many-1" class="tsd-anchor"></a>
+								<h3>many</h3>
+								<div class="tsd-signature tsd-kind-icon">many<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L105">sample.ts:105</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralizedwithgender.plural-1.other-2" class="tsd-anchor"></a>
+								<h3>other</h3>
+								<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;plural-other $(DirectText)&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L104">sample.ts:104</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralizedwithgender.plural-1.few-1" class="tsd-anchor"></a>
+								<h3>few</h3>
+								<div class="tsd-signature tsd-kind-icon">few<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L96">sample.ts:96</a></li>
+									</ul>
+								</aside>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="tr.pluralizedwithgender.plural-1.few-1.female-1" class="tsd-anchor"></a>
+									<h3>female</h3>
+									<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;&#x27;]</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L97">sample.ts:97</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="tr.pluralizedwithgender.plural-1.few-1.male-1" class="tsd-anchor"></a>
+									<h3>male</h3>
+									<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;beim man #&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L98">sample.ts:98</a></li>
+										</ul>
+									</aside>
+								</section>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+								<a name="tr.pluralizedwithgender.plural-1.one-2" class="tsd-anchor"></a>
+								<h3>one</h3>
+								<div class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L100">sample.ts:100</a></li>
+									</ul>
+								</aside>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="tr.pluralizedwithgender.plural-1.one-2.female-2" class="tsd-anchor"></a>
+									<h3>female</h3>
+									<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;plural-one-female # $(DirectText)&#x27;]</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L101">sample.ts:101</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+									<a name="tr.pluralizedwithgender.plural-1.one-2.male-2" class="tsd-anchor"></a>
+									<h3>male</h3>
+									<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;plural-one-male $(DirectText)&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L102">sample.ts:102</a></li>
+										</ul>
+									</aside>
+								</section>
+							</section>
+						</section>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-is-not-exported">
 					<a name="translations" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> translations</h3>
 					<div class="tsd-signature tsd-kind-icon">translations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L30">sample.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L116">sample.ts:116</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -319,7 +938,7 @@
 						<div class="tsd-signature tsd-kind-icon">de-<wbr>DE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L31">sample.ts:31</a></li>
+								<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L117">sample.ts:117</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -328,7 +947,7 @@
 							<div class="tsd-signature tsd-kind-icon">Direct<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;DirectText&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L34">sample.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L120">sample.ts:120</a></li>
 								</ul>
 							</aside>
 						</section>
@@ -338,7 +957,7 @@
 							<div class="tsd-signature tsd-kind-icon">Hello<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;Hallo&#x27;, &#x27;Hi&#x27;, &#x27;Servus&#x27;]</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L70">sample.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L156">sample.ts:156</a></li>
 								</ul>
 							</aside>
 						</section>
@@ -348,7 +967,7 @@
 							<div class="tsd-signature tsd-kind-icon">Named<wbr>Place<wbr>Holder<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Text two with {MyVariable}&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L33">sample.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L119">sample.ts:119</a></li>
 								</ul>
 							</aside>
 						</section>
@@ -358,7 +977,7 @@
 							<div class="tsd-signature tsd-kind-icon">Place<wbr>Holder<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Text with {0}&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L32">sample.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L118">sample.ts:118</a></li>
 								</ul>
 							</aside>
 						</section>
@@ -368,7 +987,7 @@
 							<div class="tsd-signature tsd-kind-icon">Slang<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;nasen&#x27;, &#x27;eumel&#x27;, &#x27;vögel&#x27;]</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L71">sample.ts:71</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L157">sample.ts:157</a></li>
 								</ul>
 							</aside>
 						</section>
@@ -378,7 +997,7 @@
 							<div class="tsd-signature tsd-kind-icon">Text<wbr>Array<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;TextArray1&#x27;, &#x27;TextArray1&#x27;]</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L35">sample.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L121">sample.ts:121</a></li>
 								</ul>
 							</aside>
 						</section>
@@ -388,7 +1007,7 @@
 							<div class="tsd-signature tsd-kind-icon">With<wbr>Text<wbr>Link<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;$(DirectText) with $(Slang)&#x27;]</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L36">sample.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L122">sample.ts:122</a></li>
 								</ul>
 							</aside>
 						</section>
@@ -398,7 +1017,7 @@
 							<div class="tsd-signature tsd-kind-icon">Gendered<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L37">sample.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L123">sample.ts:123</a></li>
 								</ul>
 							</aside>
 							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -407,7 +1026,7 @@
 								<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;is female&quot;</span></div>
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L39">sample.ts:39</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L125">sample.ts:125</a></li>
 									</ul>
 								</aside>
 							</section>
@@ -417,7 +1036,7 @@
 								<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;is male&quot;</span></div>
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L38">sample.ts:38</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L124">sample.ts:124</a></li>
 									</ul>
 								</aside>
 							</section>
@@ -428,7 +1047,7 @@
 							<div class="tsd-signature tsd-kind-icon">Pluralized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L41">sample.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L127">sample.ts:127</a></li>
 								</ul>
 							</aside>
 							<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -437,7 +1056,7 @@
 								<div class="tsd-signature tsd-kind-icon">plural<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L42">sample.ts:42</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L128">sample.ts:128</a></li>
 									</ul>
 								</aside>
 								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -446,7 +1065,7 @@
 									<div class="tsd-signature tsd-kind-icon">few<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;few&quot;</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L45">sample.ts:45</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L131">sample.ts:131</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -456,7 +1075,7 @@
 									<div class="tsd-signature tsd-kind-icon">many<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;many&quot;</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L46">sample.ts:46</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L132">sample.ts:132</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -466,7 +1085,7 @@
 									<div class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;one&quot;</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L44">sample.ts:44</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L130">sample.ts:130</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -476,7 +1095,7 @@
 									<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;other&quot;</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L47">sample.ts:47</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L133">sample.ts:133</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -486,7 +1105,7 @@
 									<div class="tsd-signature tsd-kind-icon">two<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;two&quot;</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L48">sample.ts:48</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L134">sample.ts:134</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -496,7 +1115,7 @@
 									<div class="tsd-signature tsd-kind-icon">zero<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;zero&quot;</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L43">sample.ts:43</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L129">sample.ts:129</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -508,7 +1127,7 @@
 							<div class="tsd-signature tsd-kind-icon">Pluralized<wbr>With<wbr>Gender<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L51">sample.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L137">sample.ts:137</a></li>
 								</ul>
 							</aside>
 							<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -517,7 +1136,7 @@
 								<div class="tsd-signature tsd-kind-icon">ordinal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L65">sample.ts:65</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L151">sample.ts:151</a></li>
 									</ul>
 								</aside>
 								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -526,7 +1145,7 @@
 									<div class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;erstes $(Hello)&#x27;]</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L66">sample.ts:66</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L152">sample.ts:152</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -536,7 +1155,7 @@
 									<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;zweites $(Hello)&quot;</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L67">sample.ts:67</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L153">sample.ts:153</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -547,7 +1166,7 @@
 								<div class="tsd-signature tsd-kind-icon">plural<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L53">sample.ts:53</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L139">sample.ts:139</a></li>
 									</ul>
 								</aside>
 								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -556,7 +1175,7 @@
 									<div class="tsd-signature tsd-kind-icon">many<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&quot;</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L63">sample.ts:63</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L149">sample.ts:149</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -566,7 +1185,7 @@
 									<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;plural-other $(DirectText)&quot;</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L62">sample.ts:62</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L148">sample.ts:148</a></li>
 										</ul>
 									</aside>
 								</section>
@@ -576,7 +1195,7 @@
 									<div class="tsd-signature tsd-kind-icon">few<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L54">sample.ts:54</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L140">sample.ts:140</a></li>
 										</ul>
 									</aside>
 									<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -585,7 +1204,7 @@
 										<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;&#x27;]</span></div>
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L55">sample.ts:55</a></li>
+												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L141">sample.ts:141</a></li>
 											</ul>
 										</aside>
 									</section>
@@ -595,7 +1214,7 @@
 										<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;beim man #&quot;</span></div>
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L56">sample.ts:56</a></li>
+												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L142">sample.ts:142</a></li>
 											</ul>
 										</aside>
 									</section>
@@ -606,7 +1225,7 @@
 									<div class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L58">sample.ts:58</a></li>
+											<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L144">sample.ts:144</a></li>
 										</ul>
 									</aside>
 									<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -615,17 +1234,17 @@
 										<div class="tsd-signature tsd-kind-icon">female<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;plural-one-female # $(DirectText)&#x27;]</span></div>
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L59">sample.ts:59</a></li>
+												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L145">sample.ts:145</a></li>
 											</ul>
 										</aside>
 									</section>
 									<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
 										<a name="translations.de_de.pluralizedwithgender.plural-1.one-2.male-2" class="tsd-anchor"></a>
 										<h3>male</h3>
-										<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;plural-one-male $(DirectText)&quot;</span></div>
+										<div class="tsd-signature tsd-kind-icon">male<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;plural-one-male # $(DirectText)&quot;</span></div>
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L60">sample.ts:60</a></li>
+												<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L146">sample.ts:146</a></li>
 											</ul>
 										</aside>
 									</section>
@@ -640,26 +1259,26 @@
 					<div class="tsd-signature tsd-kind-icon">utility<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L9">sample.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L9">sample.ts:9</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-not-exported">
 						<a name="utility.escapequotes" class="tsd-anchor"></a>
 						<h3>escape<wbr>Quotes</h3>
 						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal tsd-is-not-exported">
-							<li class="tsd-signature tsd-kind-icon">escape<wbr>Quotes<span class="tsd-signature-symbol">(</span>string<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+							<li class="tsd-signature tsd-kind-icon">escape<wbr>Quotes<span class="tsd-signature-symbol">(</span>s<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 						</ul>
 						<ul class="tsd-descriptions">
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L10">sample.ts:10</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L10">sample.ts:10</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
 								<ul class="tsd-parameters">
 									<li>
-										<h5>string: <span class="tsd-signature-type">string</span></h5>
+										<h5>s: <span class="tsd-signature-type">string</span></h5>
 									</li>
 								</ul>
 								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -670,19 +1289,19 @@
 						<a name="utility.unescapequotes" class="tsd-anchor"></a>
 						<h3>unescape<wbr>Quotes</h3>
 						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal tsd-is-not-exported">
-							<li class="tsd-signature tsd-kind-icon">unescape<wbr>Quotes<span class="tsd-signature-symbol">(</span>string<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+							<li class="tsd-signature tsd-kind-icon">unescape<wbr>Quotes<span class="tsd-signature-symbol">(</span>s<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 						</ul>
 						<ul class="tsd-descriptions">
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/16ca176/src/sample.ts#L13">sample.ts:13</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-ts-internationalization/blob/ed42882/src/sample.ts#L13">sample.ts:13</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
 								<ul class="tsd-parameters">
 									<li>
-										<h5>string: <span class="tsd-signature-type">string</span></h5>
+										<h5>s: <span class="tsd-signature-type">string</span></h5>
 									</li>
 								</ul>
 								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -727,31 +1346,25 @@
 						<a href="interfaces/translator.html" class="tsd-kind-icon">Translator</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#pluralizedgroup" class="tsd-kind-icon">Pluralized<wbr>Group</a>
+						<a href="globals.html#genderedtranslationitem" class="tsd-kind-icon">Gendered<wbr>Translation<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#languagedictionary" class="tsd-kind-icon">Language<wbr>Dictionary</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#pluralizedstring" class="tsd-kind-icon">Pluralized<wbr>String</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#translationitem" class="tsd-kind-icon">Translation<wbr>Item</a>
+						<a href="globals.html#pluralizedtranslationitem" class="tsd-kind-icon">Pluralized<wbr>Translation<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="globals.html#translations" class="tsd-kind-icon">Translations</a>
+						<a href="globals.html#translationdictionary" class="tsd-kind-icon">Translation<wbr>Dictionary</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#a" class="tsd-kind-icon">a</a>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#translationitem" class="tsd-kind-icon">Translation<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#areintllocalessupported" class="tsd-kind-icon">are<wbr>Intl<wbr>Locales<wbr>Supported</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#isgendergroup" class="tsd-kind-icon">is<wbr>Gender<wbr>Group</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#ispluralcategory" class="tsd-kind-icon">is<wbr>Plural<wbr>Category</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#ispluralgroup" class="tsd-kind-icon">is<wbr>Plural<wbr>Group</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#regex_replace_number" class="tsd-kind-icon">regex_<wbr>replace_<wbr>number</a>
@@ -765,11 +1378,14 @@
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#tlib" class="tsd-kind-icon">tlib</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#xxx" class="tsd-kind-icon">xxx</a>
-					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#initializeintl" class="tsd-kind-icon">Initialize<wbr>Intl</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#newt" class="tsd-kind-icon">newT</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#tr" class="tsd-kind-icon">tr</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-is-not-exported">
 						<a href="globals.html#translations" class="tsd-kind-icon">translations</a>
