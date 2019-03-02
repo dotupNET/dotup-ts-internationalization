@@ -1,34 +1,101 @@
 import { LanguageEnum } from './LanguageEnum';
 import { TextLibrary, Translations } from './TextLibrary';
+import { InitializeIntl } from './IntlInitializer';
+import { GenderGroups } from './GenderGroups';
+import { PluralGroups } from './PluralGroup';
+import { PluralCategory } from './PluralCategory';
 
-// export declare type TextKeysType = 'Hello' | 'Welcome' | 'Slang' | 'Pussy';
-export enum TextKeys { 'Hello' = 'Hello', 'Welcome' = 'Welcome', 'Slang' = 'Slang' }
-// export declare type LanguageCode = 'de' | 'en'; // " | "en-US" | "en-GB" | "en-CA" | "en-IN" | "de-DE";
 
-// const texts: NestedPartialObject<LanguageEnum, TextKeys, string | string[]> = {
-//   'de-DE': {
-//     Welcome: ['$(Hello) ihr $(Slang)'],
-//     Hello: ['Hallo', 'Hi', 'Servus'],
-//     Slang: ['nasen', 'eumel', 'vögel'],
-//     // Pussy: 'Ahja'
-//     // Pussy: ['$(Hello) ihr nasen']
-//   }
-// };
-
-const textss: Translations<TextKeys> = {
-  'de-DE': {
-    Welcome: ['$(Hello) ihr $(Slang)'],
-    Hello: ['Hallo', 'Hi', 'Servus'],
-    Slang: ['nasen', 'eumel', 'vögel']
-    // Pussy: 'Ahja'
-    // Pussy: ['$(Hello) ihr nasen']
+const utility = {
+  escapeQuotes: function (string: string) {
+    return string.replace(/"/g, '\\"');
+  },
+  unescapeQuotes: function (string: string) {
+    return string.replace(/\\"/g, '"');
   }
 };
 
-const tlib = new TextLibrary(textss);
+
+enum TextKeys {
+  'Hello' = 'Hello', 'WithTextLink' = 'WithTextLink', 'Slang' = 'Slang',
+  PluralizedWithGender = 'PluralizedWithGender',
+  DirectText = 'DirectText',
+  Pluralized = 'Pluralized',
+  TextArray = 'TextArray',
+  PlaceHolderText = 'PlaceHolderText',
+  Gendered = 'Gendered',
+  NamedPlaceHolderText = 'NamedPlaceHolderText'
+}
+
+const translations: Translations<TextKeys> = {
+  'de-DE': {
+    PlaceHolderText: 'Text with {0}',
+    NamedPlaceHolderText: 'Text two with {MyVariable}',
+    DirectText: 'DirectText',
+    TextArray: ['TextArray1', 'TextArray1'],
+    WithTextLink: ['$(DirectText) with $(Slang)'],
+    Gendered: {
+      male: 'is male',
+      female: 'is female'
+    },
+    Pluralized: {
+      plural: {
+        zero: 'zero',
+        one: 'one',
+        few: 'few',
+        many: 'many',
+        other: 'other',
+        two: 'two'
+      }
+    },
+    PluralizedWithGender: {
+
+      plural: {
+        few: {
+          female: [''],
+          male: 'beim man #'
+        },
+        one: {
+          female: ['plural-one-female # $(DirectText)'],
+          male: 'plural-one-male $(DirectText)'
+        },
+        other: 'plural-other $(DirectText)',
+        many: ''
+      },
+      ordinal: {
+        one: ['erstes $(Hello)'],
+        other: 'zweites $(Hello)'
+      }
+    },
+    Hello: ['Hallo', 'Hi', 'Servus'],
+    Slang: ['nasen', 'eumel', 'vögel']
+  }
+};
+
+
+const a: any = translations['de-DE'];
+const xxx = a.ExtendedPluralized['plural']['few'];
+const isPluralGroup = Object.keys(PluralGroups).some(group => Object.keys(xxx).some(item => item === group));
+const isPluralCategory = Object.keys(PluralCategory).some(group => Object.keys(xxx).some(item => item === group));
+const isGenderGroup = Object.keys(GenderGroups).some(group => Object.keys(xxx).some(item => item === group));
+
+InitializeIntl(LanguageEnum.deDE, LanguageEnum.enGB);
+
+const tlib = new TextLibrary(translations);
 const t = tlib.getTranslator(LanguageEnum.deDE);
 
+const result = t.format({
+  key: TextKeys.PluralizedWithGender,
+  gender: GenderGroups.male,
+  plural: {
+    group: PluralGroups.plural,
+    value: 1
+  }
+});
+console.log(`format 1: ${result}`);
+
 for (let index = 0; index < 10; index += 1) {
-  console.log(t.getText(TextKeys.Welcome));
+  console.log(`getPlural ${index}: ${t.getPlural(TextKeys.PluralizedWithGender, index)}`);
+  console.log(`getOrdinals ${index}: ${t.getOrdinals(TextKeys.PluralizedWithGender, index)}`);
 }
-console.log(t.getText(TextKeys.Slang));
+console.log(`getText: ${t.getText(TextKeys.Slang)}`);

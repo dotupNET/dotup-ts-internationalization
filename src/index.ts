@@ -1,3 +1,6 @@
+export * from './GenderGroups';
+export * from './IntlInitializer';
 export * from './LanguageEnum';
-export * from './PluralGroups';
+export * from './PluralCategory';
+export * from './PluralGroup';
 export * from './TextLibrary';

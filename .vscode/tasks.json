@@ -35,13 +35,13 @@
         "${file}"
       ],
       "group": "test",
-      "problemMatcher": "$tslint5"
+      "problemMatcher": "$tsc"
     },
     {
       "type": "grunt",
       "task": "tslint",
       "problemMatcher": [
-        "$tslint5"
+        "$tsc"
       ]
     },
     {
@@ -55,7 +55,7 @@
       "type": "grunt",
       "task": "release",
       "problemMatcher": [
-        "$tslint5"
+        "$tsc"
       ]
     },
     {

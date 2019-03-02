@@ -1,7 +1,7 @@
 {
-  "name": "dotup-ts-textmanager",
-  "version": "0.0.3",
-  "description": "Text library for node skills",
+  "name": "dotup-ts-internationalization",
+  "version": "0.0.1",
+  "description": "Library for typed translation and internationalization",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -17,23 +17,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dotupNET/dotup-ts-textmanager.git"
+    "url": "git+https://github.com/dotupNET/dotup-ts-internationalization.git"
   },
   "keywords": [
     "typescript",
-    "alexa",
-    "skill",
-    "dynamodb",
-    "persistence"
+    "typed",
+    "i18n",
+    "intl",
+    "cldr",
+    "translation",
+    "pluralrules",
+    "NumberFormat",
+    "DateTimeFormat"
   ],
   "author": "Peter Ullrich",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dotupNET/dotup-ts-textmanager/issues"
+    "url": "https://github.com/dotupNET/dotup-ts-internationalization/issues"
   },
-  "homepage": "https://github.com/dotupNET/dotup-ts-textmanager#readme",
+  "homepage": "https://github.com/dotupNET/dotup-ts-internationalization#readme",
   "dependencies": {
-    "dotup-ts-types": "^0.0.17"
+    "dotup-ts-types": "^0.0.17",
+    "intl": "^1.2.5",
+    "intl-locales-supported": "^1.0.0",
+    "intl-pluralrules": "^1.0.0"
   },
   "devDependencies": {
     "@types/jasmine": "^3.3.9",
@@ -54,7 +61,7 @@
     "jasmine-ts-console-reporter": "^3.1.1",
     "rimraf": "^2.6.3",
     "ts-node": "^8.0.2",
-    "tslint": "^5.13.0",
+    "tslint": "^5.13.1",
     "tslint-microsoft-contrib": "^6.0.0",
     "typedoc": "^0.14.2",
     "typescript": "^3.3.3"

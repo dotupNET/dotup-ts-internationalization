@@ -1,4 +1,4 @@
-export enum PluralGroups {
+export enum PluralCategory {
   zero = 'zero',
   one = 'one',
   two = 'two',
