@@ -46,7 +46,9 @@ export class TextLibrary<TTextKeys extends string> {
 
         let text = ArrayTools.getRandomValue(result);
         if (opt.plural !== undefined) {
-          text = text.replace(regex_replace_number, opt.plural.value.toString());
+          const no = Intl.NumberFormat(parent)
+            .format(opt.plural.value);
+          text = text.replace(regex_replace_number, no);
         }
 
         return StringTools.format(text, ...args);
@@ -75,7 +77,10 @@ export class TextLibrary<TTextKeys extends string> {
         const linksResolved = texts.map(t => StringTools.format(t, ...args));
 
         let text = ArrayTools.getRandomValue(linksResolved);
-        text = text.replace(regex_replace_number, count.toString());
+        const no = Intl.NumberFormat(parent)
+          .format(count);
+
+        text = text.replace(regex_replace_number, no);
 
         return StringTools.format(text, ...args);
       },
