@@ -7,7 +7,7 @@ import { LanguageEnum } from './LanguageEnum';
 import { PluralCategory } from './PluralCategory';
 import { PluralGroups } from './PluralGroup';
 import { Translator } from './Translator';
-import { LanguageDictionary, TranslationDictionary } from './Types';
+import { LanguageDictionary, PartialLanguageDictionary, PartialTranslationDictionary, TranslationDictionary } from './Types';
 /*
   http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html
  */
@@ -17,11 +17,11 @@ const regex_replace_number = /#/gm;
 export class TextLibrary<TTextKeys extends string> {
   data: LanguageDictionary<TTextKeys>;
 
-  constructor(data: LanguageDictionary<TTextKeys>) {
+  constructor(data: LanguageDictionary<TTextKeys> | PartialLanguageDictionary<TTextKeys>) {
     this.data = data;
   }
 
-  addTranslations(language: LanguageEnum, translations: TranslationDictionary<TTextKeys>) {
+  addTranslations(language: LanguageEnum, translations: TranslationDictionary<TTextKeys> | PartialTranslationDictionary<TTextKeys>) {
     const lng = this.data[language];
     if (lng === undefined) {
       this.data[language] = translations;
