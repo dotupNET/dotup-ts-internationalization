@@ -15,7 +15,7 @@ import { LanguageDictionary, PartialLanguageDictionary, PartialTranslationDictio
 const regex_replace_number = /#/gm;
 
 export class TextLibrary<TTextKeys extends string> {
-  data: LanguageDictionary<TTextKeys>;
+  data: LanguageDictionary<TTextKeys> | PartialLanguageDictionary<TTextKeys>;
 
   constructor(data: LanguageDictionary<TTextKeys> | PartialLanguageDictionary<TTextKeys>) {
     this.data = data;
