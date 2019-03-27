@@ -38,34 +38,6 @@
       "problemMatcher": "$tsc"
     },
     {
-      "type": "grunt",
-      "task": "tslint",
-      "problemMatcher": [
-        "$tsc"
-      ]
-    },
-    {
-      "type": "npm",
-      "script": "release",
-      "problemMatcher": [
-        "$tsc"
-      ]
-    },
-    {
-      "type": "grunt",
-      "task": "release",
-      "problemMatcher": [
-        "$tsc"
-      ]
-    },
-    {
-      "type": "grunt",
-      "task": "publish",
-      "problemMatcher": [
-        "$tsc"
-      ]
-    },
-    {
       "type": "gulp",
       "task": "project-build",
       "problemMatcher": [

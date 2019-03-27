@@ -1,13 +1,13 @@
+import intlLocalesSupported from 'intl-locales-supported';
 import { LanguageEnum } from './LanguageEnum';
-
-const areIntlLocalesSupported = require('intl-locales-supported');
 
 export function InitializeIntl(...requiredLocales: LanguageEnum[]) {
   if (global.Intl) {
     // Determine if the built-in `Intl` has the locale data we need.
-    if (!areIntlLocalesSupported(requiredLocales)) {
+    if (!intlLocalesSupported(requiredLocales)) {
       // `Intl` exists, but it doesn't have the data we need, so load the
       // polyfill and patch the constructors we need with the polyfill's.
+      // tslint:disable-next-line:no-require-imports
       const IntlPolyfill = require('intl');
       Intl.NumberFormat = IntlPolyfill.NumberFormat;
       Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;

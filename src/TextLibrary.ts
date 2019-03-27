@@ -34,8 +34,8 @@ export class TextLibrary<TTextKeys extends string> {
   getTranslator(parent: LanguageEnum): Translator<TTextKeys> {
     return {
       // tslint:disable-next-line: no-any
-      format: (options: TTextKeys | string | FormatOptions<TTextKeys>, ...args: any[]): string => {
-        let opt: FormatOptions<TTextKeys>;
+      format: (options: TTextKeys | string | FormatOptions<TTextKeys | string>, ...args: any[]): string => {
+        let opt: FormatOptions<TTextKeys | string>;
         if (typeof options === 'string') {
           opt = {
             key: options
@@ -164,7 +164,7 @@ export class TextLibrary<TTextKeys extends string> {
   }
 
   // tslint:disable: no-unsafe-any : no-any
-  resolve(language: LanguageEnum, options: FormatOptions<TTextKeys>): string[] {
+  resolve(language: LanguageEnum, options: FormatOptions<TTextKeys | string>): string[] {
     let result: string[];
     let childEntry: any;
 
@@ -229,7 +229,7 @@ export class TextLibrary<TTextKeys extends string> {
   }
   // tslint:enable: no-unsafe-any : no-any
 
-  replaceTextLinks(text: string | string[], parent: LanguageEnum, options: FormatOptions<TTextKeys>): string[] {
+  replaceTextLinks(text: string | string[], parent: LanguageEnum, options: FormatOptions<TTextKeys | string>): string[] {
     const lines = Array.isArray(text) ? text : [text];
     const regex = /\$\([\w-]+\|?[\w-|\{\}:'"\s,\[\].,<>]+\)/;
     const replaceLinkInLine = (line: string): string => {
