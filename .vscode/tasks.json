@@ -71,6 +71,13 @@
       "problemMatcher": [
         "$tsc"
       ]
+    },
+    {
+      "type": "gulp",
+      "task": "project-publish",
+      "problemMatcher": [
+        "$tsc"
+      ]
     }
   ]
 }
