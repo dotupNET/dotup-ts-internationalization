@@ -64,6 +64,13 @@
       "problemMatcher": [
         "$tsc"
       ]
+    },
+    {
+      "type": "gulp",
+      "task": "project-build",
+      "problemMatcher": [
+        "$tsc"
+      ]
     }
   ]
 }

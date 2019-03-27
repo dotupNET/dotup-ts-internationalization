@@ -15,13 +15,14 @@ import { LanguageDictionary, PartialLanguageDictionary, PartialTranslationDictio
 const regex_replace_number = /#/gm;
 
 export class TextLibrary<TTextKeys extends string> {
-  data: LanguageDictionary<TTextKeys> | PartialLanguageDictionary<TTextKeys>;
+  data: LanguageDictionary<TTextKeys | string> | PartialLanguageDictionary<TTextKeys | string>;
 
-  constructor(data: LanguageDictionary<TTextKeys> | PartialLanguageDictionary<TTextKeys>) {
+  constructor(data: LanguageDictionary<TTextKeys | string> | PartialLanguageDictionary<TTextKeys | string>) {
     this.data = data;
   }
 
-  addTranslations(language: LanguageEnum, translations: TranslationDictionary<TTextKeys> | PartialTranslationDictionary<TTextKeys>) {
+  // tslint:disable-next-line:max-line-length
+  addTranslations(language: LanguageEnum, translations: TranslationDictionary<TTextKeys | string> | PartialTranslationDictionary<TTextKeys | string>) {
     const lng = this.data[language];
     if (lng === undefined) {
       this.data[language] = translations;
@@ -33,7 +34,7 @@ export class TextLibrary<TTextKeys extends string> {
   getTranslator(parent: LanguageEnum): Translator<TTextKeys> {
     return {
       // tslint:disable-next-line: no-any
-      format: (options: TTextKeys | FormatOptions<TTextKeys>, ...args: any[]): string => {
+      format: (options: TTextKeys | string | FormatOptions<TTextKeys>, ...args: any[]): string => {
         let opt: FormatOptions<TTextKeys>;
         if (typeof options === 'string') {
           opt = {
@@ -58,7 +59,7 @@ export class TextLibrary<TTextKeys extends string> {
       },
 
       // tslint:disable-next-line: no-any
-      getText: (textkey: TTextKeys, ...args: any[]): string => {
+      getText: (textkey: TTextKeys | string, ...args: any[]): string => {
         const result = this.resolve(parent, { key: textkey });
 
         const text = ArrayTools.getRandomValue(result);
@@ -66,13 +67,13 @@ export class TextLibrary<TTextKeys extends string> {
         return StringTools.format(text, ...args);
       },
       // tslint:disable-next-line: no-any
-      getTexts: (textkey: TTextKeys, ...args: any[]): string[] => {
+      getTexts: (textkey: TTextKeys | string, ...args: any[]): string[] => {
         const result = this.resolve(parent, { key: textkey });
 
         return result.map(text => StringTools.format(text, ...args));
       },
       // tslint:disable-next-line: no-any
-      getPlural: (key: TTextKeys, count: number, ...args: any[]): string => {
+      getPlural: (key: TTextKeys | string, count: number, ...args: any[]): string => {
         const texts = this.getCardinal(parent, key, count);
         const linksResolved = texts.map(t => StringTools.format(t, ...args));
 
@@ -85,7 +86,7 @@ export class TextLibrary<TTextKeys extends string> {
         return StringTools.format(text, ...args);
       },
       // tslint:disable-next-line: no-any
-      getPlurals: (key: TTextKeys, count: number, ...args: any[]): string[] => {
+      getPlurals: (key: TTextKeys | string, count: number, ...args: any[]): string[] => {
         const texts = this.getCardinal(parent, key, count);
 
         return texts.map(text => {
@@ -98,7 +99,7 @@ export class TextLibrary<TTextKeys extends string> {
         });
       },
       // tslint:disable-next-line: no-any
-      getOrdinals: (key: TTextKeys, count: number, ...args: any[]): string[] => {
+      getOrdinals: (key: TTextKeys | string, count: number, ...args: any[]): string[] => {
         const texts = this.getOrdinal(parent, key, count);
 
         return texts.map(text => {
@@ -142,7 +143,7 @@ export class TextLibrary<TTextKeys extends string> {
   //   return result;
   // }
 
-  getCardinal(language: LanguageEnum, key: TTextKeys, count: number): string[] {
+  getCardinal(language: LanguageEnum, key: TTextKeys | string, count: number): string[] {
     return this.resolve(language, {
       key: key,
       plural: {
@@ -152,7 +153,7 @@ export class TextLibrary<TTextKeys extends string> {
     });
   }
 
-  getOrdinal(language: LanguageEnum, key: TTextKeys, count: number): string[] {
+  getOrdinal(language: LanguageEnum, key: TTextKeys | string, count: number): string[] {
     return this.resolve(language, {
       key: key,
       plural: {
