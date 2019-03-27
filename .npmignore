@@ -22,3 +22,4 @@ tslint.json
 gruntfile.js
 skill.json
 skill.*.json
+.yo-rc.json
